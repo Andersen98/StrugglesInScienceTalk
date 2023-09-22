@@ -1,0 +1,66 @@
+\begin{frame}{Normal Mode Oscillations}
+    Given equations $\eqref{eq:E_dot_result}$ and $\eqref{eq:C_dot_result}$,  we can calculate the probability of finding the emitter in the excited and ground state. 
+    \begin{equation}
+    \label{eq:probability_E}
+    \begin{split}
+         P_{e} (t) = |E(t)|^2= \frac{e^{-K t}}{2} \left[ 1 + \frac{\Gamma^2 + \Delta^2}{4g^2} +\left( 1 - \frac{\Gamma^2 + \Delta^2 }{4 g^2}\right) \cos(2 g t) \right. \\
+         \left. + \frac{\Gamma}{g} \sin(2 g) \vphantom{ \frac{\Gamma^2 + \Delta^2}{4g^2} +\left( 1 - \frac{\Gamma^2 + \Delta^2 }{4 g^2}\right)} \right ]
+    \end{split}
+    \end{equation}
+    
+    \begin{equation}
+        \label{eq:probability_C}
+        P_c (t) = |C(t)|^2 = \frac{g_0^2}{g^2}e^{-K t} \sin^2(g t)
+    \end{equation}
+\end{frame}
+
+\begin{frame}{Plots from \citep{Cui2006}}
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.25]{CUI_RAYMER_DIAGRAMS/prob_states.png}
+        \caption{Probability of finding emitter in excited (red) and ground (blue) in linear and logarithmic scale. $(g_0,\kappa,\gamma)/2 \pi = (8,1.6,0.32)$GHz}
+        \label{fig:Probabilities}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Emission Probability in the long time limit( $t >> K^{-1}$)}
+    From \citep{Cui2005}, when a single quanta is emitted by the excited emitter, it might not be a single mode traveling wavepacket since it can decay into the emitter reservoir. However, the emission probability $P_o (t)$ is the probability of finding a single photon in the output mode of the cavity between $t_0 = 0$ and $t$.
+    \begin{align}
+    \notag
+    P_o(t) &= 2 \kappa \int_0^t dt' |C(t')|^2 \\ \label{eq_probability_output}
+    &= \eta_q\left \{ 1-e^{-K t} \left [ 1+\frac{K^2}{2 g^2} \sin^2(g t) + \frac{K}{2 g} \sin (2 g t) \right ] \right \}
+    \end{align}
+\end{frame}
+\begin{frame}{Emission Probability in the long time limit( $t >> K^{-1}$)}
+   \begin{align}
+    \notag
+    P_o(t) &= 2 \kappa \int_0^t dt' |C(t')|^2 \\ \label{eq_probability_output}
+    &= \eta_q\left \{ 1-e^{-K t} \left [ 1+\frac{K^2}{2 g^2} \sin^2(g t) + \frac{K}{2 g} \sin (2 g t) \right ] \right \}
+    \end{align}
+    Where $\eta_q \equiv \eta_c \cdot \eta_{extr} \equiv [g_0^2/(g_0^2 + \kappa \gamma)] [\kappa/(\kappa +\gamma)]$ is the single photon Quantum Efficiency of the emitter in the cavity QED strong coupling regime. It can be viewed as the product of the coupling efficiency of the emitter to the cavity mode ($\eta_{c}$) and the extraction efficiency ($\eta_{extr}$) of the single photon into a signle mode traveling wavepacket. 
+\end{frame}
+
+\begin{frame}{Emission Probability Plots}
+    From \citep{Cui2005}
+    \begin{center}
+        \includegraphics[scale=.4]{CUI_RAYMER_DIAGRAMS/emissionspectra.png}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Emission Spectra of the Cavity Quasimode}
+    For a stationary and ergodic process, the Wiener-Khintchine theorem states that the spectrum is given by the Fourier transform of the two time correlation function of the radiation field. 
+    \begin{equation}
+        S_{SE}(\Omega) = 2 \gamma \frac{1}{\pi} Re\left \{ \int_0^\infty d\tau e^{i \Omega \tau} \left [ \int_0^\infty dt E(t+\tau)E^*(t)\right ] \right \}
+    \end{equation}
+\end{frame}
+
+
+\begin{frame}{Emission Spectra of the Cavity Quasimode}
+    We find that 
+    \begin{equation}
+        S_{SE} = \frac{\gamma}{\pi}\left|\frac{\kappa + i(\Omega + \Delta)}{(K/2 - i \Delta /2 -i \Omega)^2 + g^2} \right |
+    \end{equation}
+\end{frame}
+
+

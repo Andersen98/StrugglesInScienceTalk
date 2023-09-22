@@ -1,0 +1,166 @@
+\begin{frame}{Recall Splitting}
+    \includegraphics[scale=.3]{Exp_Diagrams/nano_split_diagram.png}
+\newline 
+Given a set of decay rates (figure 1a) we would like to construct the intensity vs energy diagram in figure 1b.
+\end{frame}
+
+
+\begin{frame}{Looking at a Leaky Optical Cavity Interaction}
+    \begin{columns}
+        \column{.5\textwidth}
+        \includegraphics[scale=.4]{CUI_RAYMER_DIAGRAMS/CR_mirrors.png}
+        \column{.5\textwidth}
+        \citep{Cui2006} Develops probability amplitude method in the Weisskopf-Wigner approximation, normal-mode oscillations and emission spectra of SPS in cavity QED strong coupling regime, and the influence of pure dephasing on the normal-mode oscillations and emission spectra. 
+    \end{columns}
+    
+\end{frame}
+
+\subsubsection{Probability Amplitudes}
+
+\begin{frame}{Interaction Hamiltonian}
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.45]{CUI_RAYMER_DIAGRAMS/CR_hamiltonian.png}
+        \caption{$H_I(t)$ assumes the dipole approximation and rotating wave approximation. Note the explicit time dependence of $H_I(t)$ }
+        \label{fig:CR_Hamiltonian}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{State Space}
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.6]{CUI_RAYMER_DIAGRAMS/CR_State_Space.png}
+        \caption{ $\ket{m,n} (m=e,g;n=0,1)$ corresponds to emitter state with $n$ photons in the cavity.  $\ket{j_{\vec{p} }}_{R_2} \ket{l_{\vec{k}}}_{R_2}$ corresponds to $j$ photons in reservoir $R_1$ and $l$ photons in a single mode ($\vec{k}$) traveling wave of one-dimensional photon reservoir $R_2$ (output beam)}
+        \label{fig:my_label}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Solving the Time Dependent Schrodinger Equation}
+    From $i \hbar \partial_t \ket{\psi (t)} = H_I(t) \ket{\psi (t) }$
+   \begin{align}
+   \notag
+       i \hbar \Dot{E}(t) &=  {}_{R_1}\bra{0}{}_{R_2}\bra{0} \bra{0,e} H_I (t) \ket{\psi (t)}\\
+       &=  \hbar g_0 C(t) e^{i\Delta t} + \hbar \sum_{\vp} S_{\vp}(t) A_{\vp} e^{-i \delta_p t } 
+   \end{align}
+   
+   \begin{align}
+   \notag
+       i \hbar \Dot{S}_{\vp} (t) &=  {}_{R_1}\bra{1_{\vp}}{}_{R_2}\bra{0} \bra{0,g} H_I (t) \ket{\psi (t)}\\
+       &= \hbar E(t) A^{*}_{\vp} e^{i \delta_p t} 
+   \end{align}
+
+\end{frame}
+
+\begin{frame}{Time Dependent Schrodinger Equation Cont.}
+ From $i \hbar \partial_t \ket{\psi (t)} = H_I(t) \ket{\psi (t) }$
+ \begin{align}
+ \notag
+     i \hbar \Dot{C} (t) &= {}_{R_1}\bra{0}{}_{R_2}\bra{0} \bra{1,g} H_I (t) \ket{\psi (t)}\\
+     &= \hbar g_0 E(t) e^{- i \Delta t} + \hbar \sum_{\vk} B_{\vk} O_{\vk}(t) e^{-i \delta_k t}
+ \end{align}
+ 
+ \begin{align}
+    \notag
+      i \hbar \Dot{O}_{\vk} (t) &= {}_{R_1}\bra{0}{}_{R_2}\bra{1_{\vk}} \bra{0,g} H_I (t) \ket{\psi (t)}\\
+      &= \hbar B^{*}_{\vk} C(t) e^{i\delta_k t} 
+ \end{align}
+\end{frame}
+
+\begin{frame}{Time Dependent Schrodinger Equation Cont.}
+
+ \begin{equation}
+ \label{eq:S_result}
+     S_{\vp}(t) = -i A^{*}_{\vp} \int_0^t dt' E(t')  e^{i\delta_p t'}
+ \end{equation}
+ \begin{equation}
+    \label{eq:O_result}
+     O_{\vk}(t) = -i B^{*}_{\vk} \int_0^t dt' C(t') e^{i \delta_{k} t'}
+ \end{equation}
+
+ 
+ \end{frame}
+
+\begin{frame}{Time Dependent Schrodinger Equation Cont.}
+ From $i \hbar \partial_t \ket{\psi (t)} = H_I(t) \ket{\psi (t) }$
+ \begin{align}
+ \notag
+     \Dot{E}(t) &= -i g_0 C(t) e^{i \Delta t} -i \sum_{\vp}\left[ -i A^{*}_{\vp} \int_0^t dt' E(t')  e^{-i\delta_p t'}\right ] A_{\vp} e^{-i\delta_p t}\\
+     &=-i g_0 C(t) e^{i \Delta t} - \sum_{\vp} |A_{\vp}|^2 \int_0^t dt' E(t')  e^{i\delta_p (t'-t)} \label{eq:E_dot_raw}
+ \end{align}
+ \begin{align}
+ \notag
+     \Dot{C}(t) &= -i g_0 E(t) e^{-i \Delta t} -i \sum_{\vk} B_{\vk} e^{-i\delta_k t} \left [  -i B^{*}_{\vk} \int_0^t dt' C(t') e^{i \delta_{k} t'} \right] \\
+     &= -i E(t) e^{-i \Delta t} - \sum_{\vk} |B_{\vk}|^2  \int_0^t dt' C(t') e^{i \delta_{k}( t'-t)}\label{eq:C_dot_raw}
+ \end{align}
+     
+
+\end{frame}
+\subsubsection{Dipole Approximation }
+\subsection{Application of Weisskopf-Wigner Approximation}
+\begin{frame}{From Discrete to Continuous}
+    We assume modes of the field are closely spaced in frequency. 
+    \begin{equation}
+        \sum_{\vk} \xrightarrow[]{} 2 \frac{V}{(2 \pi)^{3}} \int_0^{2\pi} d \phi \int_0^\pi d\theta \sin \theta  \int_0^\infty dk \, k^2
+    \end{equation}
+    
+    \begin{equation}
+        |A_{\vp}|^2 = \frac{\nu_p}{2\hbar \epsilon_0 V} \mathcal{D}^2 \cos^2\theta_{\vp} \label{eq:free_coupling}
+    \end{equation} where $v_k = k\,c$ \newline
+    (same argument can be applied for $|B_{\vk}|^2 $)
+\end{frame}
+
+\begin{frame}{Weisskopf-Wigner Approximation }
+    \begin{align}
+        \label{eq:E_dot}
+        \Dot{E}(t) &= -i g_0 C(t) e^{i\Delta t} \times \\ \notag
+        &\qquad -  \frac{\mathcal{D}}{2 \hbar \epsilon_0 Vc^3} \frac{2 V}{(2 \pi)^3} \times \\ \notag 
+        &\qquad \int_0^{2\pi} d\phi \int_0^{\pi} d\theta \sin \theta \cos^2 \theta \int_0^\infty d\nu_p\, \nu_p^3 \int_0^t dt' E(t')e^{i(\nu_p - \omega_0)(t-t')} 
+    \end{align}
+    The transition frequency $\omega_0$. $v_p^2$ varies  little about $v_k = \omega_0$ during non-negligable tme in Eq. \eqref{eq:E_dot}. We replace $v_k^3$ by  $\omega_0^3$ and the lower limit of the $v_k$ integration by $-\infty$, which yields the Weisskopf-Wigner approximation (\citep{Scully1997}, \citep{Weisskopf1930}). 
+\end{frame}
+
+\begin{frame}{Solutions to Probability Amplitude}
+    Since $\int_{-\infty}^{\infty}d \nu_k e^{i(\omega_0 - \nu_k)(t-t')}= 2\pi \delta(t-t')$ we find
+    \begin{align}   
+        \notag
+        \Dot{E}(t) &= -i g_0 C(t) e^{i \Delta t} - \frac{\mathcal{D} \omega_0^3 (2 \pi)}{\hbar \epsilon_0 c^3 (2\pi)^3}\frac{2}{3}\int_0^t dt' E(t') \int_{-\infty}^{\infty}d\nu_p e^{i(\nu_p-\omega_0)(t-t')}\\ \notag
+        &= -i g_0 C(t) e^{i \Delta t} -\frac{2\mathcal{D} \omega_0^3 }{3\hbar \epsilon_0 c^3 (2\pi)^2} \int_0^t dt' E(t') 2\pi \delta(t-t')\\ \notag
+        &= -i g_0 C(t) e^{i \Delta t} -\frac{2\mathcal{D} \omega_0^3 }{6\pi \hbar \epsilon_0 c^3 }E(t)\\
+        &= -i g_0 C(t) e^{i \Delta t} -\gamma E(t) \label{eq:E_dot_result}
+    \end{align}
+\end{frame}
+
+\begin{frame}{Solutions to Probability Amplitude}
+    If we apply the same steps to Eq. $\eqref{eq:C_dot_raw}$ as we did to Eq. $\eqref{eq:E_dot_raw}$, we recover the same results as found in \citep{Cui2006}.
+    \begin{align}
+        \tag{\ref{eq:O_result}}
+        O_{\vk}(t) &= -i B^{*}_{\vk} \int_0^t dt' C(t') e^{i \delta_{k} t'}\\\tag{\ref{eq:S_result}}
+        S_{\vp}(t) &= -i A^{*}_{\vp} \int_0^t dt' E(t')  e^{i\delta_p t'}\\\tag{\ref{eq:E_dot_result}}
+        \Dot{E}(t) &= -i g_0 C(t) e^{i \Delta t} -\gamma E(t) \\
+        \Dot{C}(t) &= -i g_0 E(t) e^{-i \Delta t} - \kappa C(t) \label{eq:C_dot_result}        
+    \end{align}
+\end{frame}
+
+
+\begin{frame}{Solution to Time Evolution}
+    The general solution to the coupled differential equations are:
+    \begin{figure}
+        \centering
+        \includegraphics[scale=.4]{CUI_RAYMER_DIAGRAMS/C_R_Coupled_Diff_sol.png}
+        \caption{$K = \kappa + \gamma,\; \Gamma = \kappa - \gamma, \; \lambda = \sqrt{g_0^2 - \left[(\Gamma - i \Delta)/2\right]^2}$ }
+        \label{fig:coupled_diff_sol}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Time Evolution when Starting in Excited State}
+    In the strong coupling regime, $g_0 >> \kappa, \gamma$. In this case, $Re(\lambda) >> Im(\lambda)$. Then $\lambda$ can be approximated as $ \lambda \approx g = \sqrt{g_0^2 + (\Delta / 2)^2 - (\Gamma /2 )^2 }$ \newline 
+   
+    
+    \begin{block}{State Amplitudes}
+        $E(t) = e^{- \left[ (K - i)/2\right] t}\left[ \cos (g t) + \frac{\Gamma - i \Delta}{2 g} \sin (g t) \right ]$\newline
+        $C(t) = e^{-i \left [ (K + i \Delta )/2\right] t} \left [ - \frac{i g_0 }{g} \sin (g t) \right ] $
+    \end{block}
+\end{frame}
+
+

@@ -1,0 +1,28 @@
+\documentclass{beamer}
+\include{preamble.tex}
+
+\title{Struggles in Science:}
+\author{Maeve Andersen}
+
+\begin{document}
+\setcitestyle{authoryear,round,comma,aysep={;},yysep={,},notesep={, }}
+% For every picture that defines or uses external nodes, you'll have to
+% apply the 'remember picture' style. To avoid some typing, we'll apply
+% the style to all pictures.
+\tikzstyle{every picture}+=[remember picture]
+
+% By default all math in TikZ nodes are set in inline mode. Change this to
+% displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+\maketitle
+
+\frame{\tableofcontents}
+
+\section{Science!}
+\subsection{How do we think of light matter coupling?}
+\subsection{Treatments of Light Matter}
+\include{subsections/scully_cavity_in_cavity.tex}
+\section{Science?}
+\include{subsections/coming_out.tex}
+\end{document}
