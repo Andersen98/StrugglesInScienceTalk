@@ -1,4 +1,3 @@
-Copy
 ---
 title:
 - Struggles in Science (Practice Talk)
@@ -10,42 +9,8 @@ date:
 - September 22 2023
 bibliography:
 - refs.bib
-
 ---
-# Notes
 
-- add some more real world examples
-- maybe add springs
-- big picture: 
-- how to NOT do research or
-- healthy relationship with stem
-- it can get better!
-- here is my story?
-	- what experiences did i go through?
-	- say what you learned and what you went through
-	- 
-
-- on rule 3 (slide 7 ) add a picture 
-- add a figure of a guitar string
-- add a picture of the helmhotlz resonator
-- add ![this](https://github.com/Andersen98/ge_2014/blob/main/results/total.gif)
-- ask students to come up with resonators
-- swing sets
-- in a bathtub, slosh the water. Is this a resonant mode?
-- crystals in electronics?
-
-
-Personal story
-
-- talk a bit about how these projects "work" on a long time scale, 
-	-> how were my projects like? What did that look like from the reference
-	of my life.
-
-Logistics
-My Story in Science: Numerically Computing Quasi Normal Modes While Coming Out as Transgender
-- add src//CU-Prime-talk-slides-2.pdf
-- be there at 4:15pm
----
 # What is an Optical Resonator?
 
 An optical resonator is characterized by its **resonant modes**. 
@@ -78,6 +43,8 @@ patterns or vibrations of light.
 # Illustration of an accoustic resonant mode
 
 ![helmhotz resonator](img/helmholtz-example.png){width=50%}
+![](img/Helmholtz_resonator.jpg){width=30%}
+https://en.wikipedia.org/wiki/Helmholtz_resonance#/media/File:Helmholtz_resonator.jpg
 
 *The accoustic resonator is knocked by the palm of a hand ($t=0$).*
 
@@ -99,6 +66,7 @@ patterns or vibrations of light.
 
 # Idea \#3 of Optical Resonators
 > Looking at the resonator signal after "long enough" is a way to look at the resonant mode's signal!
+![helmhotz resonator](img/helmholtz-example.png){width=20%}
 
 ---
 # Question: Can Resonators (Optical or Accoustic) have multiple resonant modes? Discuss w/ your neighbor
