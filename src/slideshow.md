@@ -20,6 +20,18 @@ An optical resonator is characterized by its **resonant modes**.
 
 - `resonant`: Something that continues to ring or "sing"
 - `mode`: Any distict pattern or vibration in a physical system
+
+-----
+# Question: Do you know any examples of resonators? Discuss with your neighbor
+
+*Hint: resonators can also be accoustic or vibrational*
+
+-----
+# Examples of resonators
+
+- Guitars! ![](img/guitar.png)
+- Quartz! ![](img/quartz.jpg)
+
 ------
 # Revisit: What is an Optical Resonator?
 
@@ -90,3 +102,8 @@ When I came out, my social identity changed non-adiabatically. I had to build a 
 # I accumulated a lot of stress from wearing dresses and makeup out in public
 
 At age 24, I felt really really **really* awkward trying to be myself
+
+---
+# Refs
+
+- [quartz oscillator image](https://en.wikipedia.org/wiki/Crystal_oscillator#/media/File:Quartz_crystal_internal.jpg) `https://en.wikipedia.org/wiki/Crystal_oscillator#/media/File:Quartz_crystal_internal.jpg`
