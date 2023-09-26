@@ -1,15 +1,7 @@
----
-title:
-- Struggles in Science (Practice Talk)
-author:
-- Mae Andersen
-theme:
-- Copenhagen
-date:
-- September 22 2023
-bibliography:
-- refs.bib
----
+% Habits
+% John Doe
+% March 22, 2005-
+
 
 # About me
 
